@@ -1,1 +1,21 @@
-<p>login works!</p>
+<br>
+
+
+<div class="w-25 p-3" style="text-align: center; background-color: rgb(200, 226, 255);">
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div class="form-group mb-2">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                    placeholder="Enter email" [(ngModel)]="model.email" name="email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="model.password" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
