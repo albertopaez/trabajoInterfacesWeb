@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ConstantsService } from 'src/app/services/constants.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  constructor(private http: HttpClient, private constants: ConstantsService) {}
 
-  constructor() { }
+  movies = this.getProducts();
 
-  ngOnInit(): void {
+  getProducts() {
+    return this.http.get(`${this.constants.API_ENDPOINT}movies`);
   }
 
+  ngOnInit() {
+  }
 }
