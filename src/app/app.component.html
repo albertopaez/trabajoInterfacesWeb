@@ -1,43 +1,65 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" routerLink="/home" >Home</a>
+        <a class="nav-link font-weight-bold" routerLink="/home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" routerLink="/categories" >Categories</a>
+        <a class="nav-link font-weight-bold" routerLink="/categories">Categories</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" routerLink="/actors" >Actors</a>
+        <a class="nav-link font-weight-bold" routerLink="/actors">Actors</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" routerLink="/directors" >Directors</a>
+        <a class="nav-link font-weight-bold" routerLink="/directors">Directors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold" routerLink="/favorites">Favorites</a>
       </li>
     </ul>
-      <a class="nav-item nav-link text-white font-weight-bold" data-toggle="modal" data-target="#exampleModalLong">Log Out</a>
+    <a class="nav-item nav-link text-white font-weight-bold" data-toggle="modal" data-target="#loginModal">Log In</a>
   </div>
 </nav>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <h5 class="modal-title" id="loginModalTitle">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        
+          <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+            <div class="form-group mb-2">
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                  placeholder="Enter email" [(ngModel)]="model.email" name="email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                  else.</small>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password"
+                  [(ngModel)]="model.password" name="password">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

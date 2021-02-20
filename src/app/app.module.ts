@@ -8,7 +8,6 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { ActorsComponent } from './components/actors/actors.component';
 import { DirectorsComponent } from './components/directors/directors.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
-import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoginFormModel } from './components/login/loginFormModel';
@@ -21,7 +20,6 @@ import { LoginFormModel } from './components/login/loginFormModel';
     ActorsComponent,
     DirectorsComponent,
     FavoritesComponent,
-    LoginComponent
   ],
   imports: [
     BrowserModule,

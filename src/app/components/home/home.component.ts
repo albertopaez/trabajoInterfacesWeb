@@ -10,9 +10,9 @@ import { ConstantsService } from 'src/app/services/constants.service';
 export class HomeComponent implements OnInit {
   constructor(private http: HttpClient, private constants: ConstantsService) {}
 
-  movies = this.getProducts();
+  movies = this.getMovies();
 
-  getProducts() {
+  getMovies() {
     return this.http.get(`${this.constants.API_ENDPOINT}movies`);
   }
 

@@ -1,1 +1,18 @@
-<p>favorites works!</p>
+<br>
+
+<div class="row">
+    <div *ngFor="let myMovie of myMovies | async">
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{{myMovie.image}}" class="card-img-top" alt="sin imagen">
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{myMovie.name}}</b></h5>
+                    <p class="card-text text-dark"> <b>Fecha de salida: </b>{{myMovie.releaseDate}}</p>
+                    <p class="card-text text-dark"><b>Sinopsis: </b>{{myMovie.synopsis}}</p>
+                    <p class="card-text text-dark"><b>Tags: </b>{{myMovie.tags}}</p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
