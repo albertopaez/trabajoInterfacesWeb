@@ -3,7 +3,6 @@
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
@@ -13,16 +12,14 @@
         <a class="nav-link font-weight-bold" routerLink="/categories">Categories</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" routerLink="/actors">Actors</a>
+        <a class="nav-link font-weight-bold" routerLink="/favorites" *ngIf="isLogged">Favorites</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" routerLink="/directors">Directors</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link font-weight-bold" routerLink="/favorites">Favorites</a>
+        <a class="nav-link font-weight-bold" routerLink="/administration" *ngIf="isAdmin">Administration</a>
       </li>
     </ul>
-    <a class="nav-item nav-link text-white font-weight-bold" data-toggle="modal" data-target="#loginModal">Log In</a>
+    <a class="nav-item nav-link text-white font-weight-bold" *ngIf="!isLogged" data-toggle="modal" data-target="#loginModal">Log In</a>
+    <a class="nav-item nav-link text-white font-weight-bold" *ngIf="isLogged" (click)="onLogout()">Log Out</a>
   </div>
 </nav>
 
@@ -54,12 +51,10 @@
                   [(ngModel)]="model.password" name="password">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
           </form>
         
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
