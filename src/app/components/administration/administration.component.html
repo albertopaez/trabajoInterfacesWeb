@@ -1,1 +1,123 @@
-<p>administration works!</p>
+<br>
+
+<button class="btn btn-success center" data-target="#createModal" data-toggle="modal">New Movie</button>
+
+<br>
+<br>
+
+<div class="row delete-right-margin">
+  <div *ngFor="let movie of movies">
+    <div class="col-md-3 center">
+      <div class="card center bg-dark" style="width: 18rem;">
+        <img src="{{movie.image}}" class="card-img-top" alt="{{movie.name}}">
+        <div class="card-body">
+          <h5 class="card-title text-white"><b>{{movie.name}}</b></h5>
+          <!-- <p class="card-text text-white"> <b>Fecha de salida: </b>{{movie.releaseDate}}</p> -->
+          <p class="card-text text-white"><b>Sinopsis: </b>{{movie.synopsis}}</p>
+          <p class="card-text text-white"><b>Tags: </b>{{movie.tags}}</p>
+          <div *ngIf="isLogged">
+            <button type="button" class="btn btn-primary"
+              (click)='printEditModal(movie.id, movie.name, movie.synopsis, movie.image, movie.tags)'
+              data-toggle="modal" data-target="#editModal">Edit</button>
+            <button type="button" class="btn btn-danger" (click)='deleteMovie(movie.id)'>Delete</button>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalTitle">Edit Movie</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <form (ngSubmit)="onSubmitEdit()" #loginForm="ngForm">
+          <div class="form-group mb-2">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input class="form-control" id="name" aria-describedby="movieNme" [value]='this.movieName'
+                [(ngModel)]="model.name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Synopsis</label>
+              <textarea rows="4" class="form-control" id="synopsis" aria-describedby="movieSynopsis" [value]='this.movieSynopsis'
+                [(ngModel)]="model.synopsis" name="name"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="email">Image</label>
+              <input class="form-control" id="image" aria-describedby="movieImage" [value]='this.movieImage'
+                [(ngModel)]="model.image" name="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Tags</label>
+              <input class="form-control" id="tags" aria-describedby="movieTags" [value]='this.movieTags'
+                [(ngModel)]="model.tags" name="name">
+            </div>
+            <div class="form-group">
+              <label for="email">ID</label>
+              <input readonly='readonly' class="form-control" id="id" aria-describedby="movieId" [value]='this.movieId'
+                [(ngModel)]="model.id" name="name">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalTitle"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createModalTitle">Create Movie</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <form (ngSubmit)="onSubmitCreate()" #loginForm="ngForm">
+          <div class="form-group mb-2">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input class="form-control" id="name" aria-describedby="movieNme" [(ngModel)]="model.name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Synopsis</label>
+              <textarea class="form-control" id="synopsis" aria-describedby="movieSynopsis" [(ngModel)]="model.synopsis"
+                name="name"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="email">Image</label>
+              <input class="form-control" id="image" aria-describedby="movieImage" [(ngModel)]="model.image"
+                name="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Tags</label>
+              <input class="form-control" id="tags" aria-describedby="movieTags" [(ngModel)]="model.tags" name="name">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

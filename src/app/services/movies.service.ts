@@ -22,4 +22,28 @@ export class MoviesService {
     return this.http.get(`${this.constants.API_ENDPOINT}movies/`+id);
   }
 
+  putMovie(data){
+    console.log("DATA", data)
+    return this.http.put(`${this.constants.API_ENDPOINT}movies/`+'?access_token='+localStorage.getItem("token"), data).subscribe(
+      (response)=>{
+        window.location.reload();
+      },(error) => {
+        console.log('error',error.error.error.message)
+        alert('Parametros invalidos')
+        window.location.reload();
+      }
+      ); 
+  }
+
+  deleteMovie(id){
+    console.log("DELETE MOVIE", id)
+    return this.http.delete(`${this.constants.API_ENDPOINT}movies/`+id+'?access_token='+localStorage.getItem("token")).subscribe(
+      (response)=>{
+        window.location.reload();
+      },(error) => {
+        console.log('error',error.error.error.message)
+      }
+      ); 
+  }
+
 }

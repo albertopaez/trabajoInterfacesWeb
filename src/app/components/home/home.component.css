@@ -1,4 +1,8 @@
 .delete-right-margin {
     margin-right: 0;
-    margin-left: 15px;
+}
+
+.center{
+    display: block;
+    margin: auto;
 }

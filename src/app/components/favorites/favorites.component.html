@@ -1,18 +1,23 @@
 <br>
-
 <div class="row delete-right-margin">
     <div *ngFor="let myMovie of myMovies">
-        <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-                <img src="{{myMovie.image}}" class="card-img-top" alt="sin imagen">
+        <div class="col-md-3 center" id="{{myMovie.id}}">
+            <div class="card center bg-dark" style="width: 18rem;">
+                <img src="{{myMovie.image}}" class="card-img-top" alt="{{myMovie.name}}">
                 <div class="card-body">
-                    <h5 class="card-title"><b>{{myMovie.name}}</b></h5>
-                    <p class="card-text text-dark"> <b>Fecha de salida: </b>{{myMovie.releaseDate}}</p>
-                    <p class="card-text text-dark"><b>Sinopsis: </b>{{myMovie.synopsis}}</p>
-                    <p class="card-text text-dark"><b>Tags: </b>{{myMovie.tags}}</p>
+                    <h5 class="card-title text-white"><b>{{myMovie.name}}</b></h5>
+                    <!-- <p class="card-text text-white"> <b>Fecha de salida: </b>{{myMovie.releaseDate}}</p> -->
+                    <p class="card-text text-white"><b>Sinopsis: </b>{{myMovie.synopsis}}</p>
+                    <p class="card-text text-white"><b>Tags: </b>{{myMovie.tags}}</p>
+                    <button type="button" class="btn btn-danger" (click)="deleteFromFavs(myMovie.id)">UNFAV</button>    
+
                 </div>
             </div>
         </div>
         <br>
     </div>
+</div>
+
+<div *ngIf="!existsFavorites">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>

@@ -7,7 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'categories', component: CategoriesComponent },
+  { path: 'categories/:tag', component: CategoriesComponent },
   { path: 'favorites', component: FavoritesComponent },
   { path: 'administration', component: AdministrationComponent },
   {path: '', redirectTo: '/home',pathMatch: 'full'},
@@ -15,7 +15,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes
+    //, { onSameUrlNavigation: 'reload'}
+  )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

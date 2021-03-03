@@ -1,17 +1,19 @@
 <br>
 
 <div class="row delete-right-margin">
-    <div *ngFor="let movie of movies | async">
-        <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-                <img src="{{movie.image}}" class="card-img-top" alt="sin imagen">
+    <div *ngFor="let movie of movies">
+        <div class="col-md-3 center">
+            <div class="card center bg-dark" style="width: 18rem;">
+                <img src="{{movie.image}}" class="card-img-top" alt="{{movie.name}}">
                 <div class="card-body">
-                    <h5 class="card-title"><b>{{movie.name}}</b></h5>
-                    <!-- <p class="card-text text-dark"> <b>Fecha de salida: </b>{{movie.releaseDate}}</p> -->
-                    <p class="card-text text-dark"><b>Sinopsis: </b>{{movie.synopsis}}</p>
-                    <p class="card-text text-dark"><b>Tags: </b>{{movie.tags}}</p>
-                    <button type="button" class="btn btn-primary" (click)="addToFavs(movie.id)" *ngIf="true">FAV</button>
-                    <button type="button" class="btn btn-danger" (click)="deleteFromFavs(movie.id)" *ngIf="true">UNFAV</button>
+                    <h5 class="card-title text-white"><b>{{movie.name}}</b></h5>
+                    <!-- <p class="card-text text-white"> <b>Fecha de salida: </b>{{movie.releaseDate}}</p> -->
+                    <p class="card-text text-white"><b>Sinopsis: </b>{{movie.synopsis}}</p>
+                    <p class="card-text text-white"><b>Tags: </b>{{movie.tags}}</p>
+                    <div *ngIf="isLogged">
+                        <button type="button" class="btn btn-primary" (click)="addToFavs(movie.id)" *ngIf="!checkFav(movie.id)">FAV</button>
+                        <button type="button" class="btn btn-danger" (click)="deleteFromFavs(movie.id)" *ngIf="checkFav(movie.id)">UNFAV</button>    
+                    </div>
                 </div>
             </div>
         </div>

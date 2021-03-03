@@ -1,65 +1,120 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link font-weight-bold" routerLink="/home">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link font-weight-bold" routerLink="/categories">Categories</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link font-weight-bold" routerLink="/favorites" *ngIf="isLogged">Favorites</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link font-weight-bold" routerLink="/administration" *ngIf="isAdmin">Administration</a>
-      </li>
-    </ul>
-    <a class="nav-item nav-link text-white font-weight-bold" *ngIf="!isLogged" data-toggle="modal" data-target="#loginModal">Log In</a>
-    <a class="nav-item nav-link text-white font-weight-bold" *ngIf="isLogged" (click)="onLogout()">Log Out</a>
-  </div>
-</nav>
+<div class="image">
 
-<!-- Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="loginModalTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle font-weight-bold" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories
+          </a>
+          <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-white font-weight-bold" (click)="redirect('acción')">Acción</a>
+            <a class="dropdown-item text-white font-weight-bold" (click)="redirect('comedia')">Comedia</a>
+            <a class="dropdown-item text-white font-weight-bold" (click)="redirect('suspense')">Suspense</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" routerLink="/favorites" *ngIf="isLogged">Favorites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" routerLink="/administration" *ngIf="isAdmin">Administration</a>
+        </li>
+      </ul>
+      <a class="nav-item nav-link text-white font-weight-bold" *ngIf="!isLogged" data-toggle="modal"
+        data-target="#loginModal">Log In</a>
+      <a class="nav-item nav-link text-white font-weight-bold" *ngIf="!isLogged" data-toggle="modal"
+        data-target="#signinModal">Sign In</a>
+      <a class="nav-item nav-link text-white font-weight-bold" *ngIf="isLogged" (click)="onLogout()">Log Out</a>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" id="tagSearch" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="search()">Search</button>
+      </form>
       </div>
-      <div class="modal-body">
-        
-          <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      </nav>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalTitle">Log In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+  
+          <form (ngSubmit)="onSubmitLogin()" #loginForm="ngForm">
             <div class="form-group mb-2">
               <div class="form-group">
                 <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                  placeholder="Enter email" [(ngModel)]="model.email" name="email">
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"
+                  [(ngModel)]="loginModel.email" name="email">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                   else.</small>
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" placeholder="Password"
-                  [(ngModel)]="model.password" name="password">
+                  [(ngModel)]="loginModel.password" name="password">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
           </form>
-        
+  
+        </div>
       </div>
     </div>
   </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalTitle">Sign In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+  
+          <form (ngSubmit)="onSubmitSignin()" #loginForm="ngForm">
+            <div class="form-group mb-2">
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"
+                  [(ngModel)]="loginModel.email" name="email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                  else.</small>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password"
+                  [(ngModel)]="loginModel.password" name="password">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </form>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <router-outlet></router-outlet>
+  
 </div>
 
-
-
-<router-outlet></router-outlet>
