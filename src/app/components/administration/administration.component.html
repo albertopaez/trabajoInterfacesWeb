@@ -1,11 +1,13 @@
 <br>
 
+<button class="btn btn-success center" (click)="generatePDF()">Generate PDF</button>
+<br>
 <button class="btn btn-success center" data-target="#createModal" data-toggle="modal">New Movie</button>
 
 <br>
 <br>
 
-<div class="row delete-right-margin">
+<div class="row delete-right-margin" id="moviesContainer">
   <div *ngFor="let movie of movies">
     <div class="col-md-3 center">
       <div class="card center bg-dark" style="width: 18rem;">

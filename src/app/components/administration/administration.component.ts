@@ -3,6 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { MoviesService } from 'src/app/services/movies.service';
 import { UsersService } from 'src/app/services/users.service';
 import { MovieFormModel } from '../login/movieFormModel';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+
 
 @Component({
   selector: 'app-administration',
@@ -20,6 +23,7 @@ export class AdministrationComponent implements OnInit {
   movieImage = '';
   movieTags = [];
   movieId = '';
+  doc = new jsPDF();
 
   constructor(private http: HttpClient, private moviesServices: MoviesService, private usersService: UsersService) {
     this.getMovies();
@@ -27,6 +31,45 @@ export class AdministrationComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  generatePDF() {
+    let infoPDF = "";
+    /* const aux = document.getElementById("moviesContainer").innerHTML
+    infoPDF = aux; */
+    this.movies.forEach(movie => {
+      infoPDF = infoPDF + "ID: " + movie.id + "\n\n";
+      infoPDF = infoPDF + "Name: " + movie.name + "\n\n";
+      infoPDF = infoPDF + "Synopsis: " + movie.synopsis + "\n\n";
+      infoPDF = infoPDF + "Tags: " + movie.tags + "\n\n--------------------------------------\n\n";
+    });
+        
+    this.doc.text(infoPDF, 10, 10);
+    this.doc.save("movies documentation.pdf");
+  }
+
+  /* downloadPDF() {
+    const DATA = document.getElementById('htmlData');
+    const doc = new jsPDF('p', 'pt', 'a4');
+    const options = {
+      background: 'white',
+      scale: 3
+    };
+    html2canvas(DATA, options).then((canvas) => {
+
+      const img = canvas.toDataURL('image/PNG');
+
+      // Add image Canvas to PDF
+      const bufferX = 15;
+      const bufferY = 15;
+      const imgProps = (doc as any).getImageProperties(img);
+      const pdfWidth = doc.internal.pageSize.getWidth() - 2 * bufferX;
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
+      return doc;
+    }).then((docResult) => {
+      docResult.save("Documentation");
+    });
+  } */
 
   getMovies() {
     this.moviesServices.getMovies().subscribe((res: any[]) => {
