@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MoviesService } from 'src/app/services/movies.service';
 import { UsersService } from 'src/app/services/users.service';
-import { MovieFormModel } from '../login/movieFormModel';
+import { MovieFormModel } from '../models/movieFormModel';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 

@@ -8,7 +8,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { LoginFormModel } from './components/login/loginFormModel';
+import { LoginFormModel } from './components/models/loginFormModel';
 import { AdministrationComponent } from './components/administration/administration.component';
 
 @NgModule({
