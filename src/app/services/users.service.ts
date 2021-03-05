@@ -85,7 +85,7 @@ export class UsersService {
 
   patchFavorites(data){
     data.id = localStorage.getItem("id")
-    this.http.patch(`${this.constants.API_ENDPOINT}usuarios/`+'?access_token='+localStorage.getItem("token"), data).subscribe((res)=>{
+    this.http.patch(`${this.constants.API_ENDPOINT}usuarios/`+data.id+'?access_token='+localStorage.getItem("token"), data).subscribe((res)=>{
     },(err)=>{
       console.log(err);
     })
