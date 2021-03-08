@@ -21,6 +21,9 @@ export class FavoritesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Metodo que almacena las ids de los favoritos del usuario.
+   */
   getPersonalFavs() {
     this.usersService.getPersonalProfile(localStorage.getItem("id"), localStorage.getItem("token")).subscribe((res) => {
       this.personalFavs = res["favorites"];
@@ -30,6 +33,10 @@ export class FavoritesComponent implements OnInit {
     })
   }
 
+  /**
+   * Este metodo elimina una pelicula de la lista de favoritos del usuario
+   * @param fav ID de la pelicula
+   */
   deleteFromFavs(fav: string) {
     let position = null;
     let cont = 0;
@@ -49,6 +56,10 @@ export class FavoritesComponent implements OnInit {
     }
   }
 
+  /**
+   * Este metodo recoge los favoritos del usuario y luego los usa para filtrar todas als peliculas
+   * de tal manera que solo se registren las favortias.
+   */
   getFavoriteMovies(){
     this.usersService.getPersonalProfile(localStorage.getItem("id"), localStorage.getItem("token")).subscribe((res)=>{
       let aux = res["favorites"];

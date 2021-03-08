@@ -32,6 +32,9 @@ export class AdministrationComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Metodo que genera un PDF con la información de todas las peliculas.
+   */
   generatePDF() {
     let infoPDF = "";
     /* const aux = document.getElementById("moviesContainer").innerHTML
@@ -71,6 +74,9 @@ export class AdministrationComponent implements OnInit {
     });
   } */
 
+  /**
+   * Metodo que hace una petición de todas las peliculas y las almacena.
+   */
   getMovies() {
     this.moviesServices.getMovies().subscribe((res: any[]) => {
       this.movies = res;
@@ -79,6 +85,15 @@ export class AdministrationComponent implements OnInit {
     })
   }
 
+  /**
+   * Este metodo almacena las variables del modal de edición para que puedan ser usadas en la posterior
+   * petición a la API.
+   * @param id 
+   * @param name 
+   * @param synopsis 
+   * @param image 
+   * @param tags 
+   */
   printEditModal(id: string, name: string, synopsis: string, image: string, tags: string[],) {
     console.log('TAGS', tags)
 
@@ -89,6 +104,9 @@ export class AdministrationComponent implements OnInit {
     this.movieId = id;
   }
 
+  /**
+   * Este metodo realiza la petición para editar una pelicula.
+   */
   onSubmitEdit(){
     document.getElementById('editModal').click();
     if (this.model.id == ''){
@@ -111,6 +129,9 @@ export class AdministrationComponent implements OnInit {
     this.moviesServices.putMovie(this.model);
   }
 
+  /**
+   * Este metodo realiza la petición para crear una pelicula.
+   */
   onSubmitCreate(){
     document.getElementById('createModal').click();
     if(this.model.tags.length == 0){
@@ -122,6 +143,10 @@ export class AdministrationComponent implements OnInit {
     this.moviesServices.putMovie(this.model);
   }
 
+  /**
+   * Este metodo realiza la petición de eliminar una pelicula en concreto.
+   * @param id 
+   */
   deleteMovie(id){
     this.moviesServices.deleteMovie(id);
   }

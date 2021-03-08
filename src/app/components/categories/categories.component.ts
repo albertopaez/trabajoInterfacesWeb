@@ -25,6 +25,11 @@ export class CategoriesComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Este metodo recoge todas las peliculas y las filtra para mostrar solo las que coincidan con la busqueda.
+   * @param data Lista de todas las peliculas
+   * @returns 
+   */
   getTaggedMovies(data){
     let taggedMovies = [];
     let tag;
@@ -43,6 +48,9 @@ export class CategoriesComponent implements OnInit {
     return taggedMovies;
   }
 
+  /**
+   * Metodo que hace una petición de todas las peliculas y las almacena.
+   */
   getMovies() {
     this.moviesServices.getMovies().subscribe((res: any[]) => {
       this.movies = this.getTaggedMovies(res);
@@ -51,6 +59,9 @@ export class CategoriesComponent implements OnInit {
     })
   }
 
+  /**
+   * Metodo que almacena las ids de los favoritos del usuario.
+   */
   getPersonalFavs() {
     this.usersService.getPersonalProfile(localStorage.getItem("id"), localStorage.getItem("token")).subscribe((res) => {
       this.personalFavs = res["favorites"];
@@ -60,6 +71,10 @@ export class CategoriesComponent implements OnInit {
     })
   }
 
+  /**
+   * Este metodo elimina una pelicula de la lista de favoritos del usuario
+   * @param fav ID de la pelicula
+   */
   deleteFromFavs(fav: string) {
     let position = null;
     let cont = 0;
@@ -80,6 +95,10 @@ export class CategoriesComponent implements OnInit {
     }
   }
 
+  /**
+   * Este metodo añade una pelicula a la lista de favoritos del usuario
+   * @param fav ID de la pelicula
+   */
   addToFavs(fav: string) {
     console.log("PERSONALFAVS", this.personalFavs)
     this.personalFavs.push(fav);
@@ -91,6 +110,11 @@ export class CategoriesComponent implements OnInit {
     this.usersService.patchFavorites(data);
   }
 
+  /**
+   * Este metodo comprueba si una pelicula es favorita o no del usuario.
+   * @param id ID de la pelicula
+   * @returns Booleano que es true si la pelicula es favorita y false si no.
+   */
   checkFav(id: String) {
     let res = false;
     this.personalFavs.forEach(fav => {
