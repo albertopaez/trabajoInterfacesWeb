@@ -1,0 +1,1388 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>trabajo-interfaces-web documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">trabajo-interfaces-web documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AdministrationComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/administration/administration.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-administration</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./administration.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./administration.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#doc">doc</a>
+                            </li>
+                            <li>
+                                <a href="#isLogged">isLogged</a>
+                            </li>
+                            <li>
+                                <a href="#model">model</a>
+                            </li>
+                            <li>
+                                <a href="#movieId">movieId</a>
+                            </li>
+                            <li>
+                                <a href="#movieImage">movieImage</a>
+                            </li>
+                            <li>
+                                <a href="#movieName">movieName</a>
+                            </li>
+                            <li>
+                                <a href="#movies">movies</a>
+                            </li>
+                            <li>
+                                <a href="#movieSynopsis">movieSynopsis</a>
+                            </li>
+                            <li>
+                                <a href="#movieTags">movieTags</a>
+                            </li>
+                            <li>
+                                <a href="#personalFavs">personalFavs</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deleteMovie">deleteMovie</a>
+                            </li>
+                            <li>
+                                <a href="#generatePDF">generatePDF</a>
+                            </li>
+                            <li>
+                                <a href="#getMovies">getMovies</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmitCreate">onSubmitCreate</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmitEdit">onSubmitEdit</a>
+                            </li>
+                            <li>
+                                <a href="#printEditModal">printEditModal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, moviesServices: <a href="../injectables/MoviesService.html">MoviesService</a>, usersService: <a href="../injectables/UsersService.html">UsersService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/administration/administration.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>moviesServices</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MoviesService.html" target="_self" >MoviesService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>usersService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsersService.html" target="_self" >UsersService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteMovie"></a>
+                    <span class="name">
+                        <b>
+                            deleteMovie
+                        </b>
+                        <a href="#deleteMovie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteMovie(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="150"
+                            class="link-to-prism">src/app/components/administration/administration.component.ts:150</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo realiza la petición de eliminar una pelicula en concreto.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generatePDF"></a>
+                    <span class="name">
+                        <b>
+                            generatePDF
+                        </b>
+                        <a href="#generatePDF"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>generatePDF()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/components/administration/administration.component.ts:38</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Metodo que genera un PDF con la información de todas las peliculas.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMovies"></a>
+                    <span class="name">
+                        <b>
+                            getMovies
+                        </b>
+                        <a href="#getMovies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMovies()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">src/app/components/administration/administration.component.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Metodo que hace una petición de todas las peliculas y las almacena.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/components/administration/administration.component.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmitCreate"></a>
+                    <span class="name">
+                        <b>
+                            onSubmitCreate
+                        </b>
+                        <a href="#onSubmitCreate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmitCreate()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="135"
+                            class="link-to-prism">src/app/components/administration/administration.component.ts:135</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo realiza la petición para crear una pelicula.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmitEdit"></a>
+                    <span class="name">
+                        <b>
+                            onSubmitEdit
+                        </b>
+                        <a href="#onSubmitEdit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmitEdit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">src/app/components/administration/administration.component.ts:110</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo realiza la petición para editar una pelicula.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="printEditModal"></a>
+                    <span class="name">
+                        <b>
+                            printEditModal
+                        </b>
+                        <a href="#printEditModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>printEditModal(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, synopsis: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, image: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, tags: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/app/components/administration/administration.component.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Este metodo almacena las variables del modal de edición para que puedan ser usadas en la posterior
+petición a la API.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>name</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>synopsis</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>image</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>tags</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="doc"></a>
+                        <span class="name">
+                            <b>
+                            doc</b>
+                            <a href="#doc"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new jsPDF()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/administration/administration.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLogged"></a>
+                        <span class="name">
+                            <b>
+                            isLogged</b>
+                            <a href="#isLogged"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.usersService.isLogged</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/components/administration/administration.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="model"></a>
+                        <span class="name">
+                            <b>
+                            model</b>
+                            <a href="#model"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new MovieFormModel(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, [])</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/administration/administration.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="movieId"></a>
+                        <span class="name">
+                            <b>
+                            movieId</b>
+                            <a href="#movieId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/administration/administration.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="movieImage"></a>
+                        <span class="name">
+                            <b>
+                            movieImage</b>
+                            <a href="#movieImage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/administration/administration.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="movieName"></a>
+                        <span class="name">
+                            <b>
+                            movieName</b>
+                            <a href="#movieName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/components/administration/administration.component.ts:21</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="movies"></a>
+                        <span class="name">
+                            <b>
+                            movies</b>
+                            <a href="#movies"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/administration/administration.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="movieSynopsis"></a>
+                        <span class="name">
+                            <b>
+                            movieSynopsis</b>
+                            <a href="#movieSynopsis"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/administration/administration.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="movieTags"></a>
+                        <span class="name">
+                            <b>
+                            movieTags</b>
+                            <a href="#movieTags"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/administration/administration.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="personalFavs"></a>
+                        <span class="name">
+                            <b>
+                            personalFavs</b>
+                            <a href="#personalFavs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/administration/administration.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { MoviesService } from &#x27;src/app/services/movies.service&#x27;;
+import { UsersService } from &#x27;src/app/services/users.service&#x27;;
+import { MovieFormModel } from &#x27;../models/movieFormModel&#x27;;
+import jsPDF from &#x27;jspdf&#x27;;
+import html2canvas from &#x27;html2canvas&#x27;;
+
+
+@Component({
+  selector: &#x27;app-administration&#x27;,
+  templateUrl: &#x27;./administration.component.html&#x27;,
+  styleUrls: [&#x27;./administration.component.css&#x27;]
+})
+export class AdministrationComponent implements OnInit {
+
+  movies &#x3D; [];
+  personalFavs &#x3D; [];
+  isLogged &#x3D; this.usersService.isLogged;
+  model &#x3D; new MovieFormModel(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, []);
+  movieName &#x3D; &#x27;&#x27;;
+  movieSynopsis &#x3D; &#x27;&#x27;;
+  movieImage &#x3D; &#x27;&#x27;;
+  movieTags &#x3D; [];
+  movieId &#x3D; &#x27;&#x27;;
+  doc &#x3D; new jsPDF();
+
+  constructor(private http: HttpClient, private moviesServices: MoviesService, private usersService: UsersService) {
+    this.getMovies();
+  }
+
+  ngOnInit() {
+  }
+
+  /**
+   * Metodo que genera un PDF con la información de todas las peliculas.
+   */
+  generatePDF() {
+    let infoPDF &#x3D; &quot;&quot;;
+    /* const aux &#x3D; document.getElementById(&quot;moviesContainer&quot;).innerHTML
+    infoPDF &#x3D; aux; */
+    this.movies.forEach(movie &#x3D;&gt; {
+      infoPDF &#x3D; infoPDF + &quot;ID: &quot; + movie.id + &quot;\n\n&quot;;
+      infoPDF &#x3D; infoPDF + &quot;Name: &quot; + movie.name + &quot;\n\n&quot;;
+      infoPDF &#x3D; infoPDF + &quot;Synopsis: &quot; + movie.synopsis + &quot;\n\n&quot;;
+      infoPDF &#x3D; infoPDF + &quot;Tags: &quot; + movie.tags + &quot;\n\n--------------------------------------\n\n&quot;;
+    });
+        
+    this.doc.text(infoPDF, 10, 10);
+    this.doc.save(&quot;movies documentation.pdf&quot;);
+  }
+
+  /* downloadPDF() {
+    const DATA &#x3D; document.getElementById(&#x27;htmlData&#x27;);
+    const doc &#x3D; new jsPDF(&#x27;p&#x27;, &#x27;pt&#x27;, &#x27;a4&#x27;);
+    const options &#x3D; {
+      background: &#x27;white&#x27;,
+      scale: 3
+    };
+    html2canvas(DATA, options).then((canvas) &#x3D;&gt; {
+
+      const img &#x3D; canvas.toDataURL(&#x27;image/PNG&#x27;);
+
+      // Add image Canvas to PDF
+      const bufferX &#x3D; 15;
+      const bufferY &#x3D; 15;
+      const imgProps &#x3D; (doc as any).getImageProperties(img);
+      const pdfWidth &#x3D; doc.internal.pageSize.getWidth() - 2 * bufferX;
+      const pdfHeight &#x3D; (imgProps.height * pdfWidth) / imgProps.width;
+      doc.addImage(img, &#x27;PNG&#x27;, bufferX, bufferY, pdfWidth, pdfHeight, undefined, &#x27;FAST&#x27;);
+      return doc;
+    }).then((docResult) &#x3D;&gt; {
+      docResult.save(&quot;Documentation&quot;);
+    });
+  } */
+
+  /**
+   * Metodo que hace una petición de todas las peliculas y las almacena.
+   */
+  getMovies() {
+    this.moviesServices.getMovies().subscribe((res: any[]) &#x3D;&gt; {
+      this.movies &#x3D; res;
+    }, (err) &#x3D;&gt; {
+      console.log(&quot;err&quot;, err)
+    })
+  }
+
+  /**
+   * Este metodo almacena las variables del modal de edición para que puedan ser usadas en la posterior
+   * petición a la API.
+   * @param id 
+   * @param name 
+   * @param synopsis 
+   * @param image 
+   * @param tags 
+   */
+  printEditModal(id: string, name: string, synopsis: string, image: string, tags: string[],) {
+    console.log(&#x27;TAGS&#x27;, tags)
+
+    this.movieName &#x3D; name;
+    this.movieSynopsis &#x3D; synopsis;
+    this.movieImage &#x3D; image;
+    this.movieTags &#x3D; tags;
+    this.movieId &#x3D; id;
+  }
+
+  /**
+   * Este metodo realiza la petición para editar una pelicula.
+   */
+  onSubmitEdit(){
+    document.getElementById(&#x27;editModal&#x27;).click();
+    if (this.model.id &#x3D;&#x3D; &#x27;&#x27;){
+      this.model.id &#x3D; this.movieId;
+    }
+    if (this.model.name &#x3D;&#x3D; &#x27;&#x27;){
+      this.model.name &#x3D; this.movieName;
+    }
+    if (this.model.synopsis &#x3D;&#x3D; &#x27;&#x27;){
+      this.model.synopsis &#x3D; this.movieSynopsis;
+    }
+    if (this.model.image &#x3D;&#x3D; &#x27;&#x27;){
+      this.model.image &#x3D; this.movieImage;
+    }
+    if (this.model.tags[0] &#x3D;&#x3D; null){
+      this.model.tags &#x3D; this.movieTags;
+    }else{
+      this.model.tags &#x3D; this.model.tags.split(&#x27;,&#x27;);
+    }
+    this.moviesServices.putMovie(this.model);
+  }
+
+  /**
+   * Este metodo realiza la petición para crear una pelicula.
+   */
+  onSubmitCreate(){
+    document.getElementById(&#x27;createModal&#x27;).click();
+    if(this.model.tags.length &#x3D;&#x3D; 0){
+      console.log(&quot;TAGS&quot;, this.model.tags)
+    }else{
+      this.model.tags &#x3D; this.model.tags.split(&#x27;,&#x27;);
+    }
+    delete this.model.id;
+    this.moviesServices.putMovie(this.model);
+  }
+
+  /**
+   * Este metodo realiza la petición de eliminar una pelicula en concreto.
+   * @param id 
+   */
+  deleteMovie(id){
+    this.moviesServices.deleteMovie(id);
+  }
+
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;br&gt;
+
+&lt;button class&#x3D;&quot;btn btn-success center&quot; (click)&#x3D;&quot;generatePDF()&quot;&gt;Generate PDF&lt;/button&gt;
+&lt;br&gt;
+&lt;button class&#x3D;&quot;btn btn-success center&quot; data-target&#x3D;&quot;#createModal&quot; data-toggle&#x3D;&quot;modal&quot;&gt;New Movie&lt;/button&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;div class&#x3D;&quot;row delete-right-margin&quot; id&#x3D;&quot;moviesContainer&quot;&gt;
+  &lt;div *ngFor&#x3D;&quot;let movie of movies&quot;&gt;
+    &lt;div class&#x3D;&quot;col-md-3 center&quot;&gt;
+      &lt;div class&#x3D;&quot;card center bg-dark&quot; style&#x3D;&quot;width: 18rem;&quot;&gt;
+        &lt;img src&#x3D;&quot;{{movie.image}}&quot; class&#x3D;&quot;card-img-top&quot; alt&#x3D;&quot;{{movie.name}}&quot;&gt;
+        &lt;div class&#x3D;&quot;card-body&quot;&gt;
+          &lt;h5 class&#x3D;&quot;card-title text-white&quot;&gt;&lt;b&gt;{{movie.name}}&lt;/b&gt;&lt;/h5&gt;
+          &lt;!-- &lt;p class&#x3D;&quot;card-text text-white&quot;&gt; &lt;b&gt;Fecha de salida: &lt;/b&gt;{{movie.releaseDate}}&lt;/p&gt; --&gt;
+          &lt;p class&#x3D;&quot;card-text text-white&quot;&gt;&lt;b&gt;Sinopsis: &lt;/b&gt;{{movie.synopsis}}&lt;/p&gt;
+          &lt;p class&#x3D;&quot;card-text text-white&quot;&gt;&lt;b&gt;Tags: &lt;/b&gt;{{movie.tags}}&lt;/p&gt;
+          &lt;div *ngIf&#x3D;&quot;isLogged&quot;&gt;
+            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot;
+              (click)&#x3D;&#x27;printEditModal(movie.id, movie.name, movie.synopsis, movie.image, movie.tags)&#x27;
+              data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#editModal&quot;&gt;Edit&lt;/button&gt;
+            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-danger&quot; (click)&#x3D;&#x27;deleteMovie(movie.id)&#x27;&gt;Delete&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;br&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;editModal&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;editModalTitle&quot; aria-hidden&#x3D;&quot;true&quot;&gt;
+  &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+      &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+        &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;editModalTitle&quot;&gt;Edit Movie&lt;/h5&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+          &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+
+        &lt;form (ngSubmit)&#x3D;&quot;onSubmitEdit()&quot; #loginForm&#x3D;&quot;ngForm&quot;&gt;
+          &lt;div class&#x3D;&quot;form-group mb-2&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;name&quot;&gt;Name&lt;/label&gt;
+              &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;name&quot; aria-describedby&#x3D;&quot;movieNme&quot; [value]&#x3D;&#x27;this.movieName&#x27;
+                [(ngModel)]&#x3D;&quot;model.name&quot; name&#x3D;&quot;name&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;email&quot;&gt;Synopsis&lt;/label&gt;
+              &lt;textarea rows&#x3D;&quot;4&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;synopsis&quot; aria-describedby&#x3D;&quot;movieSynopsis&quot; [value]&#x3D;&#x27;this.movieSynopsis&#x27;
+                [(ngModel)]&#x3D;&quot;model.synopsis&quot; name&#x3D;&quot;name&quot;&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;email&quot;&gt;Image&lt;/label&gt;
+              &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;image&quot; aria-describedby&#x3D;&quot;movieImage&quot; [value]&#x3D;&#x27;this.movieImage&#x27;
+                [(ngModel)]&#x3D;&quot;model.image&quot; name&#x3D;&quot;name&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;email&quot;&gt;Tags&lt;/label&gt;
+              &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;tags&quot; aria-describedby&#x3D;&quot;movieTags&quot; [value]&#x3D;&#x27;this.movieTags&#x27;
+                [(ngModel)]&#x3D;&quot;model.tags&quot; name&#x3D;&quot;name&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;email&quot;&gt;ID&lt;/label&gt;
+              &lt;input readonly&#x3D;&#x27;readonly&#x27; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;id&quot; aria-describedby&#x3D;&quot;movieId&quot; [value]&#x3D;&#x27;this.movieId&#x27;
+                [(ngModel)]&#x3D;&quot;model.id&quot; name&#x3D;&quot;name&quot;&gt;
+            &lt;/div&gt;
+            &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-secondary&quot; data-dismiss&#x3D;&quot;modal&quot;&gt;Close&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;!-- Modal --&gt;
+&lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;createModal&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;createModalTitle&quot;
+  aria-hidden&#x3D;&quot;true&quot;&gt;
+  &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+      &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+        &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;createModalTitle&quot;&gt;Create Movie&lt;/h5&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+          &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+
+        &lt;form (ngSubmit)&#x3D;&quot;onSubmitCreate()&quot; #loginForm&#x3D;&quot;ngForm&quot;&gt;
+          &lt;div class&#x3D;&quot;form-group mb-2&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;name&quot;&gt;Name&lt;/label&gt;
+              &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;name&quot; aria-describedby&#x3D;&quot;movieNme&quot; [(ngModel)]&#x3D;&quot;model.name&quot; name&#x3D;&quot;name&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;email&quot;&gt;Synopsis&lt;/label&gt;
+              &lt;textarea class&#x3D;&quot;form-control&quot; id&#x3D;&quot;synopsis&quot; aria-describedby&#x3D;&quot;movieSynopsis&quot; [(ngModel)]&#x3D;&quot;model.synopsis&quot;
+                name&#x3D;&quot;name&quot;&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;email&quot;&gt;Image&lt;/label&gt;
+              &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;image&quot; aria-describedby&#x3D;&quot;movieImage&quot; [(ngModel)]&#x3D;&quot;model.image&quot;
+                name&#x3D;&quot;name&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;email&quot;&gt;Tags&lt;/label&gt;
+              &lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;tags&quot; aria-describedby&#x3D;&quot;movieTags&quot; [(ngModel)]&#x3D;&quot;model.tags&quot; name&#x3D;&quot;name&quot;&gt;
+            &lt;/div&gt;
+            &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-secondary&quot; data-dismiss&#x3D;&quot;modal&quot;&gt;Close&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./administration.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.delete-right-margin {
+    margin-right: 0;
+}
+
+.center{
+    display: block;
+    margin: auto;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><br><button class="btn btn-success center" (click)="generatePDF()">Generate PDF</button><br><button class="btn btn-success center" data-target="#createModal" data-toggle="modal">New Movie</button><br><br><div class="row delete-right-margin" id="moviesContainer">  <div *ngFor="let movie of movies">    <div class="col-md-3 center">      <div class="card center bg-dark" style="width: 18rem;">        <img src="{{movie.image}}" class="card-img-top" alt="{{movie.name}}">        <div class="card-body">          <h5 class="card-title text-white"><b>{{movie.name}}</b></h5>          <!-- <p class="card-text text-white"> <b>Fecha de salida: </b>{{movie.releaseDate}}</p> -->          <p class="card-text text-white"><b>Sinopsis: </b>{{movie.synopsis}}</p>          <p class="card-text text-white"><b>Tags: </b>{{movie.tags}}</p>          <div *ngIf="isLogged">            <button type="button" class="btn btn-primary"              (click)=\'printEditModal(movie.id, movie.name, movie.synopsis, movie.image, movie.tags)\'              data-toggle="modal" data-target="#editModal">Edit</button>            <button type="button" class="btn btn-danger" (click)=\'deleteMovie(movie.id)\'>Delete</button>          </div>        </div>        <br>      </div>    </div>    <br>  </div></div><!-- Modal --><div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalTitle" aria-hidden="true">  <div class="modal-dialog" role="document">    <div class="modal-content">      <div class="modal-header">        <h5 class="modal-title" id="editModalTitle">Edit Movie</h5>        <button type="button" class="close" data-dismiss="modal" aria-label="Close">          <span aria-hidden="true">&times;</span>        </button>      </div>      <div class="modal-body">        <form (ngSubmit)="onSubmitEdit()" #loginForm="ngForm">          <div class="form-group mb-2">            <div class="form-group">              <label for="name">Name</label>              <input class="form-control" id="name" aria-describedby="movieNme" [value]=\'this.movieName\'                [(ngModel)]="model.name" name="name">            </div>            <div class="form-group">              <label for="email">Synopsis</label>              <textarea rows="4" class="form-control" id="synopsis" aria-describedby="movieSynopsis" [value]=\'this.movieSynopsis\'                [(ngModel)]="model.synopsis" name="name"></textarea>            </div>            <div class="form-group">              <label for="email">Image</label>              <input class="form-control" id="image" aria-describedby="movieImage" [value]=\'this.movieImage\'                [(ngModel)]="model.image" name="name">            </div>            <div class="form-group">              <label for="email">Tags</label>              <input class="form-control" id="tags" aria-describedby="movieTags" [value]=\'this.movieTags\'                [(ngModel)]="model.tags" name="name">            </div>            <div class="form-group">              <label for="email">ID</label>              <input readonly=\'readonly\' class="form-control" id="id" aria-describedby="movieId" [value]=\'this.movieId\'                [(ngModel)]="model.id" name="name">            </div>            <button type="submit" class="btn btn-primary">Submit</button>            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>          </div>        </form>      </div>    </div>  </div></div><!-- Modal --><div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalTitle"  aria-hidden="true">  <div class="modal-dialog" role="document">    <div class="modal-content">      <div class="modal-header">        <h5 class="modal-title" id="createModalTitle">Create Movie</h5>        <button type="button" class="close" data-dismiss="modal" aria-label="Close">          <span aria-hidden="true">&times;</span>        </button>      </div>      <div class="modal-body">        <form (ngSubmit)="onSubmitCreate()" #loginForm="ngForm">          <div class="form-group mb-2">            <div class="form-group">              <label for="name">Name</label>              <input class="form-control" id="name" aria-describedby="movieNme" [(ngModel)]="model.name" name="name">            </div>            <div class="form-group">              <label for="email">Synopsis</label>              <textarea class="form-control" id="synopsis" aria-describedby="movieSynopsis" [(ngModel)]="model.synopsis"                name="name"></textarea>            </div>            <div class="form-group">              <label for="email">Image</label>              <input class="form-control" id="image" aria-describedby="movieImage" [(ngModel)]="model.image"                name="name">            </div>            <div class="form-group">              <label for="email">Tags</label>              <input class="form-control" id="tags" aria-describedby="movieTags" [(ngModel)]="model.tags" name="name">            </div>            <button type="submit" class="btn btn-primary">Submit</button>            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>          </div>        </form>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AdministrationComponent', 'selector': 'app-administration'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'HomeComponent', 'selector': 'app-home'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AdministrationComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AdministrationComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
